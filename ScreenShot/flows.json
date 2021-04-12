@@ -1,0 +1,337 @@
+[
+    {
+        "id": "11d003c0.3bfedc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a9a528c0.2daaa8",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4f3e7e5c.ddea58",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "cd8eaf15.77354",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f226b847.dee758",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "Verdana,Verdana,Geneva,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Verdana,Verdana,Geneva,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "AIT Node-RED ",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "54b74771.a06538",
+        "type": "ui_tab",
+        "name": "Météo du jour",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d0d338ad.34ce6",
+        "type": "ui_group",
+        "name": "AIT Météo",
+        "tab": "54b74771.a06538",
+        "order": 1,
+        "disp": true,
+        "width": "11",
+        "collapse": true
+    },
+    {
+        "id": "e915e3f6.b2336",
+        "type": "ui_tab",
+        "name": "Prévisions sur les 5 prochains jours",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6ccb90c3.4edca8",
+        "type": "ui_group",
+        "name": "AIT Météo",
+        "tab": "e915e3f6.b2336",
+        "order": 1,
+        "disp": true,
+        "width": "11",
+        "collapse": true
+    },
+    {
+        "id": "65dd777e.2f2b5",
+        "type": "debug",
+        "z": "11d003c0.3bfedc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ce8e5d1.7c17da",
+        "type": "openweathermap in",
+        "z": "11d003c0.3bfedc",
+        "name": "Météo du jour à Rabat",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Rabat",
+        "country": "Maroc",
+        "language": "fr",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "5955a536.a0503c"
+            ]
+        ]
+    },
+    {
+        "id": "5955a536.a0503c",
+        "type": "ui_template",
+        "z": "11d003c0.3bfedc",
+        "group": "d0d338ad.34ce6",
+        "name": "Template",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>Météo du jour</h3>\n<p>Météo à Rabat le {{msg.payload.sunrise*1000 | date:'d/M'}}</p>\n<div layout=\"row\">\n    <div layout=\"column\" style=\"padding:25px\">\n        <div layout=\"column\" layout-align=\"center center\">\n            <span style=\"color:#3a3a3a!important\">Température</span>\n            <div layout=\"row\" layout-align=\"start center\">\n                <i class=\"fa fa-thermometer fa-fw\"></i>\n                <p style=\"color: black\">{{msg.payload.tempc}}°C</p>\n            </div>\n        </div>    \n        <div layout=\"row\" layout-align=\"center\" style=\"padding:5px\">\n            <i style=\"color:blue\" class=\"fa fa-thermometer-empty fa-fw\" aria-hidden=\"true\"></i>\n            <span flex style=\"color: blue;font-size:10px!important\">{{msg.payload.temp_minc}}°C</span>\n    \n            <i style=\"color:red\" class=\"fa fa-thermometer-full fa-fw\" aria-hidden=\"true\"></i>\n            <span flex style=\"color: red;font-size:10px!important\">{{msg.payload.temp_maxc}}°C</span>\n        </div>\n    </div>\n    <div layout=\"column\" style=\"padding:25px\" layout-align=\"center center\">\n        <span flex>Humidité</span>\n        <span flex style=\"color: black\">{{msg.payload.humidity}} %</span>\n    </div>\n    <div layout=\"column\" style=\"padding:25px\" layout-align=\"center center\">\n        <span flex>Pression Atm.</span>\n        <span flex style=\"color: black\">{{msg.payload.pressure}} mbar</span>\n    </div>\n    <div layout=\"column\" style=\"padding:25px\" layout-align=\"center center\">\n        <p flex>Tendance</p>\n        <p flex style=\"color: black\">{{msg.payload.detail| uppercase}}</p>\n        <i ng-if=\"msg.payload.icon=='01d'\" class=\"fa fa-sun-o fa-2x\" style=\"color:yellow\"></i>\n        <i ng-if=\"msg.payload.icon=='02d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"msg.payload.icon=='03d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"msg.payload.icon=='04d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"msg.payload.icon=='09d'\" class=\"fa fa-tint fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"msg.payload.icon=='10d'\" class=\"fa fa-tint fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"msg.payload.icon=='11d'\" class=\"fa fa-bolt fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"msg.payload.icon=='13d'\" class=\"fa fa-snowflake-o fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"msg.payload.icon=='50d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n    </div>\n</div>\n<div>\n    <div layout=\"row\" layout-align=\"start center\">\n        <i class=\"fa fa-arrow-circle-up\"></i>\n        <p style=\"margin-left:4px\"> Lever du soleil à {{msg.payload.sunrise*1000 | date:\"HH:MM\"}} </p>\n        <i style=\"margin-left:10px\" class=\"fa fa-arrow-circle-down\"></i>\n        <p style=\"margin-left:4px\"> Coucher du soleil à {{msg.payload.sunset*1000 | date:\"HH:MM\"}}</p>\n    </div>  \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 440,
+        "y": 200,
+        "wires": [
+            [
+                "65dd777e.2f2b5"
+            ]
+        ]
+    },
+    {
+        "id": "43a99c85.39045c",
+        "type": "debug",
+        "z": "11d003c0.3bfedc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c844a5b8.86881",
+        "type": "openweathermap in",
+        "z": "11d003c0.3bfedc",
+        "name": "Prévisions sur les 5 prochains jours",
+        "wtype": "forecast",
+        "lon": "",
+        "lat": "",
+        "city": "Rabat",
+        "country": "Maroc",
+        "language": "fr",
+        "x": 240,
+        "y": 280,
+        "wires": [
+            [
+                "c2a264ce.c8e128"
+            ]
+        ]
+    },
+    {
+        "id": "c2a264ce.c8e128",
+        "type": "ui_template",
+        "z": "11d003c0.3bfedc",
+        "group": "6ccb90c3.4edca8",
+        "name": "Template2",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "format": "<h3>Prévisions sur les 5 prochains jours</h3>\n<div layout=\"row\" layout-align=\"center center\">\n  <span flex>Prévision du</span>\n  <span flex>Température</span>\n  <span flex>Pression Atm.</span>\n  <span flex>Météo</span>\n</div>\n\n<div layout=\"row\" layout-align=\"center center\" ng-repeat=\"prevision in msg.payload\">\n  <span flex style=\"color: blue\">{{prevision.dt*1000 | date:\"EEEE d MMMM à H:00\":\"\":\"fr-fr\" }}</span>\n  <div layout=\"column\" style=\"padding:25px\">\n        <div layout=\"column\" layout-align=\"center center\">\n            <div layout=\"row\" layout-align=\"start center\">\n                <p style=\"color: black;margin-left:8px\">{{prevision.main.temp | number:1.0-0}}°C</p>\n            </div>\n        </div>    \n        <div layout=\"row\" layout-align=\"center\" style=\"padding:5px\">\n            <span flex style=\"color: blue;font-size:10px!important;margin-right:5px\">{{prevision.main.temp_min | number:1.0-0}}°C</span>\n            <span flex style=\"color: red;font-size:10px!important\">{{prevision.main.temp_max | number:1.0-0}}°C</span>\n        </div>\n    </div>\n  <span flex style=\"color: black\">{{prevision.main.pressure}} mbar</span>\n    <div layout=\"column\" style=\"padding:25px\" layout-align=\"center center\">\n        <span flex style=\"color: black\">{{prevision.weather[0].description}}</span>\n        <i ng-if=\"prevision.weather[0].icon=='01d'\" class=\"fa fa-sun-o fa-2x\" style=\"color:yellow\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='02d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='03d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='04d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='09d'\" class=\"fa fa-tint fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='10d'\" class=\"fa fa-tint fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='11d'\" class=\"fa fa-bolt fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='13d'\" class=\"fa fa-snowflake-o fa-2x\" style=\"color:grey\"></i>\n        <i ng-if=\"prevision.weather[0].icon=='50d'\" class=\"fa fa-cloud fa-2x\" style=\"color:grey\"></i>\n    </div>\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "43a99c85.39045c"
+            ]
+        ]
+    },
+    {
+        "id": "dabde364.d1266",
+        "type": "e-mail",
+        "z": "11d003c0.3bfedc",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "aitelcaid.tarik@um5r.ac.ma ",
+        "dname": "Email Alerts",
+        "x": 710,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d7b03a4f.6333a",
+        "type": "openweathermap in",
+        "z": "11d003c0.3bfedc",
+        "name": "Météo Email",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Rabat",
+        "country": "Maroc",
+        "language": "fr",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "c3e279f9.053a1"
+            ]
+        ]
+    },
+    {
+        "id": "c3e279f9.053a1",
+        "type": "function",
+        "z": "11d003c0.3bfedc",
+        "name": "",
+        "func": "let date = new Date().toString().substring(0, 24);;\n\nlet oneDay = \"https://ait-node-red.eu-gb.mybluemix.net/ui/#!/0?socketid=PfaRThONgl6KDXkcAABc\";\n\nlet fiveDays = \"https://ait-node-red.eu-gb.mybluemix.net/ui/#!/1?socketid=_uzpjrn7o7Kf6GYXAABg\";\n\nlet payload = \"<h3> État de climatiseur: </h3>\";\n\nif (msg.payload.tempc < 18.0 || msg.payload.tempc > 24.0){\n   \n    payload += `<strong> Climatiseur activé : </strong>\n                <ul>\n                <li> Température à l'intérieur : 22 °C </li>\n                <li> Température à l'extérieur :  ${msg.payload.tempc} °C</li>\n                </ul>`;\n}\n\nelse payload += `<strong> Climatiseur inactif : </strong>\n                <ul>\n                <li> Température à l'intérieur :  ${msg.payload.tempc} °C</li>\n                <li> Température à l'extérieur :  ${msg.payload.tempc} °C</li>\n                </ul>`;\n                \npayload += `<br> Météo à Rabat le  ${date} <br>\n                ${oneDay} <br><br> \n                Prévisions météo 5 jours Rabat : <br> \n                ${fiveDays}`,\nmsg = {\n    payload,\n    topic : \"AIT Météo\"\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "dabde364.d1266"
+            ]
+        ]
+    }
+]
